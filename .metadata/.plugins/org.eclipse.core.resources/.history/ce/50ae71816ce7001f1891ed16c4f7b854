@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- 
+
+    선언문(문서유형) : 브라우저에게 현재 문서가 어떤 구성인지 알려주는 역할
+
+ -->
+ 
+ 
+ <!-- 
+
+    <html>
+    - html 태그 > html 요소(Element)
+    - 문서 전체를 감싸는 역할
+    - 루트 태그, 루트 엘리먼트
+    - <html>의 자식이 누군지 기억해야한다.
+        a. <head> 태그
+        b. <body> 태그
+    <head>
+    - 문서 메타 정보
+    - 화면에 출력되지 않고, 브라우저에게 전달되는 용도의 데이터
+
+  -->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+	
+	    <!-- 마크업 언어 주석 -->
+	    <!-- ctrl + Shift + / -->
+	    <!-- ctrl + Shift + \ -->
+	    
+	</body>
+</html>
