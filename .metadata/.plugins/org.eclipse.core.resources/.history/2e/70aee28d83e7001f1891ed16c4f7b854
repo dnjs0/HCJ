@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>ex05_body</title>
+</head>
+<body bgcolor="LightSteelBlue">
+    <!-- ex05_body.html -->
+    <!-- 
+    
+    
+        <body> 태그
+        - 모든 출력 내용을 관리하는 컨테이너
+        
+        <body> 속성
+        1. bgcolor
+            - 문서 배경색
+        
+        2. background
+            - 문서 배경 이미지
+    
+        HTML의 색상 표현법(*****)
+        1. 색상명
+            - Named Color, Well-known Color
+            - 미리 약속된 몇가지 색상명을 사용(140여가지)
+            - Web Color Name
+        
+        2. RGBs
+            - Red + Green + Blue = 조합
+            - 각 색상별 단계 > 256 단계(0~255 > 00~FF)
+            - 256 x 256 x 256 개의 색을 조합할 수 있다.
+    
+    -->
+    <div>안녕하세요</div>
+    
+</body>
+</html>

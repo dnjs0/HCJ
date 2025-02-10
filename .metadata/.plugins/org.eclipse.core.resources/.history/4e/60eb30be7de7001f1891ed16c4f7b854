@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- 
+
+    <head>
+    - 브라우저에게 전달할 메타 정보를 담는 컨테이너
+    
+    <head>의 자식 태그
+    1. <meta>
+        - 페이지와 
+    
+    2. <title>
+    3. <style>
+    4. <script>
+    5. 등등,,,
+
+
+
+ -->
+<head>
+	<meta charset="UTF-8">
+	<title>ex04_head.html</title>
+</head>
+<body>
+    <!--ex04_head.html -->
+</body>
+</html>
