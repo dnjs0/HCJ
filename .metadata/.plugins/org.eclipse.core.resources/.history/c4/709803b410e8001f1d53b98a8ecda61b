@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	
+	<!-- 
+	   ex07_font.html
+	   
+	   <font> ㅌ태그
+	   - 텍스트릐 크기와 색상, 글꼴을 지정하는 태그
+	   - 서식 태그> 시각적 효과를 가지는 태그 > CSS로 대체 되었다.(하지만 공부해야함)
+	   - 의미(X)
+	   
+	   
+	 -->
+	<h1>문자열</h1>
+	<font>문자열@</font>
+	
+	
+</body>
+</html>
