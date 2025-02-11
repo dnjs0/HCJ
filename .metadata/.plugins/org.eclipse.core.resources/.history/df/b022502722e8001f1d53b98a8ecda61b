@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+    <!--  ex11_list.html -->
+    <!-- 
+    
+        HTML로 할 수 있는 일 == 워드 프로세서로 할 수 있는 일
+        
+        List, 목록
+        1. <ol> + <li>
+            - <ol> : Ordered list, 순서가 있는 목록
+            - <li> : List Item, 항목
+        
+        2. <ul> + <li>
+        
+        3. <ol> + <dt> + <tt>
+        
+        
+    
+    
+    
+     -->
+     
+     <h1>오늘의 할일</h1>
+     
+     <ol>
+        <li>강아지 산책하기</li>
+        <li>노트북 포맷하기</li>
+        <li>러닝10km</li>
+        <li>발 청소하기</li>
+        <li>프로젝트 주제잡기</li>
+     </ol>
+     
+</body>
+</html>
