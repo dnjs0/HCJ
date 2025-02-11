@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+    <!-- ex13_tag.html -->
+    <!-- 
+    
+        인라인 태그 vs 블럭 태그
+        - 모든 태그들은 위의 두 분류 중 하나에 속한다.
+        - 태그가 랜더링(출력)될때 나타나는 특징에 따른 분류
+        
+        인라인 태그, Inline Tag
+        
+        
+        블럭 태그, Block Tag
+    
+     -->
+     
+     <font>인라인 태그</font>
+     <P></P>
+     <font>인라인 태그</font>
+     <font>인라인 태그</font>
+     <hr>
+     <p>블럭태그</p>
+     <p>블럭태그</p>
+     <p>블럭태그</p>
+     
+</body>
+</html>
