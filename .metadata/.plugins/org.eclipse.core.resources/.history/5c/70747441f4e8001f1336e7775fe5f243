@@ -147,23 +147,15 @@
          
          
          <select >
-            <optgroup label ="포유류">
-                <option>고양이</option>
-                <option>강아지</option>
-                <option>햠스터</option>
-            </optgroup>
-            <optgroup label ="파충류">
-                <option>이구아나</option>
-                <option>뱀</option>
-                <option>도마뱀</option>
-            </optgroup>
-            <optgroup label ="기타">
+            <option>고양이</option>
+            <option>강아지</option>
+            <option>이구아나</option>
             <option>장수풍뎅이</option>
+            <option>뱀</option>
             <option>앵무새</option>
             <option>귀뚜라미</option>
-            </optgroup>
-            
-            
+            <option>도마뱀</option>
+            <option>햠스터</option>
          </select>
          
          
