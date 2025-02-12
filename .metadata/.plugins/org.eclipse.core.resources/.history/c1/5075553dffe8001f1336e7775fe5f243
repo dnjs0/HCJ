@@ -180,21 +180,9 @@
             히든 태그
             - 안보이는 컨트롤
             - 개발자용
-            - 데이터를 전송은 해야하지만, 사용자에게 보이면 안되는 데이터
           -->
-          히든 태그 : <input type= "hidden" name="age" value="20">
+          히든 태그 : <input type= "hidden">
          
-         <hr>
-         
-         <!-- 
-            버튼류
-         
-          -->
-          전송 버튼 : <input type = "submit" value = "보내기">
-          <hr>
-          취소 버튼 : <input type = "reset" value="초기화">          
-         <hr>
-         이미지 버튼 : <input type = "image" src="images/cat05.jpg">
          <hr>
          <input type="submit" value="보내기">
     </form>

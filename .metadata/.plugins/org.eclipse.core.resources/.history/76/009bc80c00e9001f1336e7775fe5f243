@@ -194,7 +194,7 @@
           <hr>
           취소 버튼 : <input type = "reset" value="초기화">          
          <hr>
-         이미지 버튼 : <input type = "image" src="images/cat05.jpg">
+         이미지 버튼 : <input type = "image" src="images/cat03.jpg">
          <hr>
          <input type="submit" value="보내기">
     </form>
