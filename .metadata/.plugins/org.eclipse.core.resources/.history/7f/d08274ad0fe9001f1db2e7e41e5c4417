@@ -116,20 +116,6 @@
 	       <summary>JavaScript란?</summary>
 	       <div>JavaScript는 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구</div>
 	   </details>
-	   <hr>
-	   
-	   
-	   <!-- 폼태그 내에서 영역을 만드는 역할 -->
-	   <fieldset>
-	       <legend align="center">로그인</legend>
-	       <div>아이디 : <input type="text" size="5"></div>
-	       <div>암호 : <input type="text" size="5"></div>
-	   </fieldset>
-	   <hr>
-	   
-	   
-	   <!-- 뉴스 서비스 -->
-	   <marquee scrollamount="10" behavior="slide" direction ="right">🫢😊😂😘😒😍❤️🤣💕😁👍🙌🤦‍♀️🤦‍♂️😎😉🤞✌️🤷‍♀️🤷‍♀️🤷‍♂️😀😁🤣😄😋😉😆😅</marquee>
 	   
 	   
 	   <hr>	   

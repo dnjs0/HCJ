@@ -129,7 +129,7 @@
 	   
 	   
 	   <!-- 뉴스 서비스 -->
-	   <marquee scrollamount="10" behavior="slide" direction ="right">🫢😊😂😘😒😍❤️🤣💕😁👍🙌🤦‍♀️🤦‍♂️😎😉🤞✌️🤷‍♀️🤷‍♀️🤷‍♂️😀😁🤣😄😋😉😆😅</marquee>
+	   <marquee>속보입니다. 남부지역에 태풍이 어쩌고 저쩌고</marquee>
 	   
 	   
 	   <hr>	   

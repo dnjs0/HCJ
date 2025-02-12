@@ -129,7 +129,7 @@
 	   
 	   
 	   <!-- 뉴스 서비스 -->
-	   <marquee scrollamount="10" behavior="slide" direction ="right">🫢😊😂😘😒😍❤️🤣💕😁👍🙌🤦‍♀️🤦‍♂️😎😉🤞✌️🤷‍♀️🤷‍♀️🤷‍♂️😀😁🤣😄😋😉😆😅</marquee>
+	   <marquee></marquee>
 	   
 	   
 	   <hr>	   

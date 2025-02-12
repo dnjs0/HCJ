@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+    <!-- ex21_semantic.html -->
+    <!-- 
+        HTML5
+        - 의미 강조 태그
+        - 블럭 태그(=<div>)
+        
+       
+    
+     -->
+     
+     <div id="main">
+     
+     </div>
+     
+</body>
+</html>
