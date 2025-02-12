@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+    <!-- 
+        
+        form의 자식 ㅌ태그 
+        
+        <input>
+        - 단독 태그
+        - 인라인 태그
+        - input.type : 입력 컨트롤 종류
+        - input.name : 서버로 전송할 사용하는 식별자
+        - input.id : 식별자. CSS, JavaScript 에서 주로 사용
+        - input.class : 식별자. CSS, JavaScript 에서 주로 사용
+        - input.size : 컨트롤의 너비, 입력받는 글자수
+        - input.maxlength : 최대 입력 문자 수
+        
+    
+    
+    
+    -->
+    
+    <h1>입력 컨트롤</h1>
+    <form method="GET" action ex18_ok.jsp>
+        텍스트 박스(단일라인):
+        <input type="text" name = " data" size = "10", maxlength="5">
+    </form>
+</body>
+</html>
