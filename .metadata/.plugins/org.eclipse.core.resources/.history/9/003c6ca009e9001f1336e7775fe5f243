@@ -57,7 +57,7 @@
         <hr>
         
         색상 : 
-        <input type = "color" onchange="document.getElementById('ctxt').value=this.value; document.body.bgColor= this.value;">
+        <input type = "color" onchange="document.getElementById('ctxt').value=this.value; document.body.bgColor= this.value">
         <input type = "text" id="ctxt">
         <hr>
         

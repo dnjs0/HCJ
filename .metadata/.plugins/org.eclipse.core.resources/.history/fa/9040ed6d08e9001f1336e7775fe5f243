@@ -52,13 +52,8 @@
         숫자 : <input type="number" min="0" max="100" step="10">
         <hr>
         
-        범위(숫자) : <input type = "range" onchange="document.getElementById('rtxt').value=this.value;" min="20" max="100" step="20">
+        범위(숫자) : <input type = "range" onchange="document.getElementById('rtxt').value=this.value;">
         <input type="text" id="rtxt">
-        <hr>
-        
-        색상 : 
-        <input type = "color" onchange="document.getElementById('ctxt').value=this.value; document.body.bgColor= this.value;">
-        <input type = "text" id="ctxt">
         <hr>
         
         
