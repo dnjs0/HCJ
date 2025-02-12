@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+    <h1 align="center">교육훈련일지</h1>
+    <table width = "800" border= "1">
+        <tr>
+            <td width = "600">교육기관 : 서울 고용 노동부 / 쌍용 교육 센터</td>
+            <td rowspan="3">
+                <table border = "1">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>교육과정 : Java 기반 임베디드 플랫폼 연동 융합 개발자 양성 과정</td>
+        </tr>
+        <tr>
+            <td>교육일자 : 2025년       월       일      요일</td>
+        </tr>
+    </table>
+</body>
+</html>
