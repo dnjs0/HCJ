@@ -35,6 +35,9 @@ html.json에 복붙할 내용
     "    <meta charset=\"UTF-8\">",
     "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
     "    <title>Document</title>",
+    "    <style>",
+    "        $0",
+    "    </style>",
     "</head>",
     "<body>",
     "    <!-- $1 -->",
@@ -62,10 +65,13 @@ settings.json
     "workbench.startupEditor": "none",
     "editor.wordWrap": "on",
     "editor.fontSize": 20,
-    "editor.fontFamily": "'JetBrains Mono NL', Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "'JetBrains Mono NL', '맑은 고딕',Consolas, 'Courier New', monospace",
     "editor.stickyScroll.enabled": false,
     "workbench.colorTheme": "Darcula",
     "workbench.iconTheme": "material-icon-theme",
     "liveServer.settings.useLocalIp": true,
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "git.enableSmartCommit": true,
+    "editor.renderWhitespace": "boundary",
+    "git.autofetch": true
 }
