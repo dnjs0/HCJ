@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /*
+            CSS 선택자
+            1. 전체 선택자
+            2. 태그 선택자
+            3. 아이디 선택자
+            4. 클래스 선택자
+            5. 그룹 선택자
+                - 하나의 구현부 + 여러 종류희 선택자를 동시에 나열
+        */
+
+        .item { text-decoration: underline;}
+        #p1 { font-style: italic;}
         
+        /* div , h1, b{ 
+            color : rgb(116, 116, 240); 
+        }
+         */
+
+        h1, #p3, .item{
+            color : purple;
+        }
     </style>
 </head>
 <body>
