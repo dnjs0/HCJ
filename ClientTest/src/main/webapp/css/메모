@@ -60,9 +60,8 @@ html.json에 복붙할 내용
 - ctrl + shift + P  (명령 팔레트)
 
 
-
+설정에서 오른쪽 상단단
 settings.json
-
 {
     "workbench.startupEditor": "none",
     "editor.wordWrap": "on",
@@ -75,5 +74,6 @@ settings.json
     "files.autoSave": "afterDelay",
     "git.enableSmartCommit": true,
     "editor.renderWhitespace": "boundary",
-    "git.autofetch": true
+    "git.autofetch": true,
+    "git.confirmSync": false
 }
