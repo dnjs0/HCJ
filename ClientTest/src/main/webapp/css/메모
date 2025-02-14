@@ -14,6 +14,7 @@ vscode 다운받기
 - CSS Peek 다운받기 > ctrl + 클래스 클릭하면 외부 css일 경우 이동
 - IntelliSense for CSS class names in HTML 다운받기 > class 자동완성
 - html tag wrapper 다운받기 > 단축키 : ctrl+i, div등으로 감쌀때..
+- beauty > 들여쓰기 자동, 팀작업할때 쓰기
 
 설정
 - Editor: Font Family 검색 >  JetBrains Mono NL
