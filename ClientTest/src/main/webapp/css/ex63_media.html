@@ -5,11 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /*
+
+            PC 웹 & 모바일 웹
+            1. 반응형 웹
+                - 1페이지
+                - CSS > 여러개
+            2. 따로 구현
+                - PC 페이지
+                - 모바일 페이지 
+
+            Media Query
+            - CSS 기술
+            - 장치의 해상도에 따라 적용할 CSS를 선택하는 기술
+            - 모바일 웹 > 해상도 파편화 > 사용
+            - 반응형 웹(Responsive Web)
+
+            미디어 유형
+            1. all
+            2. screen   > 컴퓨터 & 모바일 > 기본값
+            3. print    > 프린터
+            4. TV       > 스마트 TV
+            5. projection > 프로젝터
+
+            미디어 조건
+            1. 모바일 : 화면 <= 480px
+            2. 태블릿 : 화면 <= 760px
+            3. 태블릿(가로) : 화면 <= 1024px
+            4. 랩탑 : 화면 1600px
+            5. 데스크탑 : 화면 > 1600px
+        */
+        body {
+            background-color: gold;
+        }
+
+        #list{
+            width: 780px;
+        }
+        #list > div {
+            width: 135px;
+            background-color: tomato;
+            float: left;
+            margin: 10px;
+
+        }
+
+        /* @media 장치 and 조건 and 조건 {
+            CSS 선언부 영역
+            선택자{ 속성 : 값 ;}
+        } */
         
+        /* @media screen and (max-width : 800px) {
+            body {
+            background-color: cornflowerblue;
+            }
+            #list > div {
+            float: none;
+
+            }
+        } */
+
+        /* 최대크기가 1024보다 작을때 */
+        @media screen and (max-width : 1024px) {
+            body{
+                background-color: cornflowerblue;
+            }
+        }
+
+        /* 최대크기가 480보다 작을때 */
+        @media screen and (max-width : 480px) {
+            body{
+                background-color: tomato;
+            }
+        }
+
+        
+
     </style>
 </head>
 <body>
     <!-- ex63_media.html -->
-    
+    <div id="list">
+        <div>강아지</div>
+        <div>고양이</div>
+        <div>병아리</div>
+        <div>송아지</div>
+        <div>호랑이</div>
+    </div>
 </body>
 </html>
