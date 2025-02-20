@@ -7,6 +7,12 @@
     <style>
         
     </style>
+
+    <script>
+        alert('반갑습니다.');
+    </script>
+    
+    <script src="ex02.js"></script>
 </head>
 <body>
     <!-- ex02.html -->
@@ -14,12 +20,18 @@
     
         HTML 문서 + JavaSrcipt 적용
 
-        1. 인라인 방식
+        1. 인라인 방식(잘안씀) > 이벤트 핸들러(Event Handler) == 이벤트
+            - 대부분의 태그 > onXXX 속성 제공
+            - 태그에 직접 자바스크립트 작성
 
         2. 임베디드 방식
+            - <script> 태그
 
-        3. 외부 방식식
+        3. 외부 방식
+                - *.js
+                - 참조
     
     -->
+    <input type="button" value="버튼" onclick='alert("안녕하십니까.");'>
 </body>
 </html>
