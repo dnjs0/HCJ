@@ -4,12 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        
-    </style>
+    <script>
+        /**
+         * 자바
+         * 1.멤버 변수 > 클래스 전역
+         * 2. 지역 변수 > 메서드 or 제어문
+         * 
+         * 자바스크립트
+         * 1. 전역 변수(Global Variable) >  현재 페이지
+         *      - 선언문 호출 ~ 페이지 종료
+         * 2. 지역 변수(Local Variable)
+         * 
+         * 
+         * 
+         * 자바 > 블럭 스코프(Block Scoped) 변수
+         *  - 클래스, 메서드, 제어문 > 모두 영역으로 인식
+         * 
+         * 자바 스크립트 > 함수 스코프(Function Scoped)변수
+         *  - 함수만 영역으로 인식
+         *  - 나머지 블럭은 제외
+         *
+         */
+        //전역
+        var num1 =100;
+        console.log(num1);
+
+        function m1() {
+            console.log(num1);
+            var num2=200;//지역변수. m1을 영역으로 함
+            console.log(num2);
+
+            if(num1 > 0){
+                var num4=400;
+                console.log(num4); //지역변수, m1을 영역으로 함
+            }
+        }
+        m1();
+        //console.log(num2); -> 에러, num2가 정의되지 않음
+
+
+        if(num1 > 0){
+            var num3=300;//전역변수(O), 지역변수(X)
+            console.log(num3);
+        }
+        console.log(num3); //됨 
+
+
+        //var 선언문 없이도 선언 가능
+        // - 전역 변수가 된다. > 사용 금지!!!!! 가독성 최악
+        num6=600;
+        console.log(num6);
+
+        function m2() {
+            var num5 = 500; //지역변수(m2)
+            num7 = 700; //전역변수
+        }
+        m2();
+        console.log(num7); //됨 
+
+
+    </script>
 </head>
 <body>
     <!-- ex06_scope.html -->
-    
+
 </body>
 </html>

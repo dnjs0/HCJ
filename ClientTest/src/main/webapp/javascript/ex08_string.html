@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- ex08_string.html -->
+    <script>
+
+        //문자열 함수
+        var txt = 'Hello! ~!Hong!';
+
+        //문자열 길이
+        console.log(txt.length);//필그=filed) > 프로퍼티 > (Property)
+
+        //검색
+        //- indetz oof
+        //LastindexOf
+
+        console.log(txt.indexOf('~'));
+
+        //대소분 변환
+        console.log(txt.substring(2,4));                               
+        console.log(txt.substring(2,2));                               
+        console.log(txt.substr(2,4));     //SQL                          
+        console.log(txt.substr(2));     //                        
+        console.log(txt.charAt(2));     //문자 푸풀 > 문자코드값?
+        console.log(txt.charAt(2));     //문잨코드추출
+
+
+        //치황
+        //- 처음 만나는 요소만 치환(반복X)
+        txt = "hello~hong~ bye hong";
+
+        console.log(txt.replace("Hong","Lee"));
+        console.log(txt.replace(/Hong/g,"Lee"));
+
+        //공백 제거
+        txt='    하나    둘    셋    ';
+        console.log(txt.trim());
+        console.log(txt.trimLeft());//ltrim()
+        console.log(txt.trimRight());//rtrim()
+        console.log(txt.trimStart());//표쥰화
+        console.log(txt.trimEnd());
+
+
+        //분할
+        txt='홍길동, 강아지, 고양이, 병아리, 멍멍이';
+        console.log(txt.split(','));
+
+        //패턴검색
+        txt = '홍길동';
+        console.log(txt.startsWith('홍'));
+        console.log(txt.endsWith('동'));
+
+
+        txt='1';
+        console.log(txt.padStart(3,'0'));//세자리수 맞춰서 왼쪽빈자리에 0 넣어라
+        console.log(txt.padEnd(3,'0'));//세자리수 맞춰서 오른쪽빈자리에 0 넣어라
+
+        txt='안녕';
+        console.log(txt.repeat(3));
+
+        
+    </script>
+</body>
+</html>
