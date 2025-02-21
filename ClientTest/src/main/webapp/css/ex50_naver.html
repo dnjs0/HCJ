@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #list{
+            width: 645px;
+            margin: 0 auto;
+            /* outline: 1px solid black; */
+        }
+        #list .item{
+            width: 600px;
+            /* outline: 1px solid blue; */
+            margin: 15px auto;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ccc;
+        }
+        #list .item::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        #list .item img{
+            float: left;
+            width: 110px;
+            height: 75px;
+            margin-right: 10px;
+        }
+        #list .item .txt{
+            float: left;
+            width: 470px;
+        }
+       
+        #list .item .txt .title{
+            font-size: 15px;
+            color: #1e1e23;
+            letter-spacing: -1px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        #list .item .txt .content{
+            font-size: 13px;
+            color: #767678;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+
+
+            /* ~말줄임표 set~ */
+            width: 470px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #list .item .txt .info{
+            
+        }
+        #list .item .txt .info span:nth-child(1){
+            color: #929298;
+            font-size: 12px;
+        }
+        #list .item .txt .info span:nth-child(2){
+            font-size: 12px;
+            color: #3f6cdb;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex50_naver.html -->
+    <div id="list">
+        <div class="item">
+            <img src="images/news11.jpg" alt="">
+            <div class="txt">
+                <div class="title">뽕나무 뿌리서 추출한 항암물질 '모라신오', 암세포 자살 유도…차세대 치료</div>
+                <div class="content">페니실린은 인류 최초의 항생제다. 푸른곰팡이에서 발견한 성분으로 염증성 질환의 치료</div>
+                <div class="info">
+                    <span>한국경제</span>
+                    <span>56분전</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="list">
+        <div class="item">
+            <img src="images/news12.png" alt="">
+            <div class="txt">
+                <div class="title">
+                    머스크, 새로운 AI 모델 ‘그록3’ 내놨다...‘구글·딥시크·오픈AI 제쳐’</div>
+                <div class="content">반년만에 새로운 모델...음성모드도 곧 공개 “수학·과학·코딩 등 벤치마크서 점수 높</div>
+                <div class="info">
+                    <span>매일경제</span>
+                    <span>58분전</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="list">
+        <div class="item">
+            <img src="images/news13.jpg" alt="">
+            <div class="txt">
+                <div class="title">판사가 화교? 도 넘는 중국 음모론 "혐오 표현으로 규제해야"</div>
+                <div class="content">'부정선거 음모론'부터 '탄핵 배후엔 중국 공산당' 주장까지. 윤석열 대통령 내란 이후 양</div>
+                <div class="info">
+                    <span>미디어오늘</span>
+                    <span>1시간전</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="list">
+        <div class="item">
+            <img src="images/news14.jpg" alt="">
+            <div class="txt">
+                <div class="title">
+                    트럼프, TSMC에 ‘인텔과 협력하라’ 압박… 가능한 시나리오는</div>
+                <div class="content">“트럼프, 대만 안보 문제 쥐고 반도체 협력 강압” TSMC, 인텔과 합작법인 또는 기술협력 </div>
+                <div class="info">
+                    <span>조선비즈</span>
+                    <span>1시간전</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="list">
+        <div class="item">
+            <img src="images/news15.jpg" alt="">
+            <div class="txt">
+                <div class="title">최재원 부회장, SK텔레콤 미등기 임원으로 합류</div>
+                <div class="content">최재원 SK 수석부회장이 SK텔레콤 상근 미등기임원으로 합류한 것으로 18일 알려졌</div>
+                <div class="info">
+                    <span>매일경제</span>
+                    <span>1시간전</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

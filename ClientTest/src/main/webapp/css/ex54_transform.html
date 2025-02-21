@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            인접한 인라인 태그 사이의 공백을 제거하는 방법
+            1. 직접 공백을 지운다.
+            2. 부모 태그의 font-size:0 으로 한다. > 콘텐츠의 글꼴 크기를 다시 재정의해야한다.
+            3. float : left > 추가 코드 발생(clear)
+            4. flex > 추가코드 발생X
+        */
+        img{
+            transition: .7s all;
+        }
+        #menu{
+            font-size: 0;
+            width: 630px;
+            margin: 0 auto;
+            transform: translate(0px, -100px);
+            
+        }
+        /* #menu:hover{
+            transform: translate(0px, -10px);
+        } */
+        #menu > img:hover{
+            transform: translate(0px,90px);
+        }
+
+
+        #sub-menu{
+            font-size: 0;
+            width: 100px;
+            margin: auto 0;
+            transform: translate(-110px, 0px);
+        }
+        #sub-menu > img:hover{
+            transform: translate(100px, 0px);
+        }
+
+        #sub-menu2{
+            font-size: 0;
+            width: 126px;
+            margin: auto 0;
+            position: absolute;
+            right: -100px;
+            top: 126px;
+        }
+        #sub-menu2 > img:hover{
+            transform: translate(-100px, 0px);
+        }
+    </style>
+</head>
+<body>
+    <!-- ex54_transform.html -->
+    <nav id="menu">
+        <img src="images/rect_icon01.png" alt="">
+        <img src="images/rect_icon02.png" alt="">
+        <img src="images/rect_icon03.png" alt="">
+        <img src="images/rect_icon04.png" alt="">
+        <img src="images/rect_icon05.png" alt="">
+    </nav>
+
+    <nav id="sub-menu">
+        <img src="images/rect_icon06.png" alt="">
+        <img src="images/rect_icon07.png" alt="">
+        <img src="images/rect_icon08.png" alt="">
+        <img src="images/rect_icon09.png" alt="">
+        <img src="images/rect_icon10.png" alt="">
+    </nav>
+
+    <nav id="sub-menu2">
+        <img src="images/rect_icon06.png" alt="">
+        <img src="images/rect_icon07.png" alt="">
+        <img src="images/rect_icon08.png" alt="">
+        <img src="images/rect_icon09.png" alt="">
+        <img src="images/rect_icon10.png" alt="">
+    </nav>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* table.css*/
+
+.table{
+    border: 1px solid #555;
+    border-collapse: collapse;
+}
+.table th, .table td{
+    border: 1px solid #555;
+    padding: 5px 10px;
+    text-align: center;
+}
+.table th { 
+    background-color: #eee;
+}
+.table .cell5{
+    text-align: left;
+    padding-left: 15px;
+}
