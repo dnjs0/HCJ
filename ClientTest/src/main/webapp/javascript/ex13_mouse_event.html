@@ -16,6 +16,9 @@
             resize: none;
             font-size: 2rem;
         }
+        input[type=button]{
+            padding: 20px 40px;
+        }
     </style>
 </head>
 <body>
@@ -116,6 +119,20 @@
             message('mousewheel' + event.deltaY);
             // window.document.body.bgcolor = 'white';
         }
+
+        btn1.onmouseover = m7;
+        btn1.onclick = m8;
+
+        function m7(){
+            message('버튼 + 마우스오버');
+        }
+
+        function m8(){
+            message('버튼 + 클릭');
+        }
+        //마우스 정보 or 키보드 정보 > 모른다. 알려고 하지 말것!!
+        //alert(event.buttons);
+
 
         function message(txt) {
             var now = new Date();
