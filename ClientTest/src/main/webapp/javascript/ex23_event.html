@@ -116,6 +116,30 @@
         </div>
 
 
+
+
+
+        <div class="item">
+            <input type="button" name="btn8" value="빨강" 
+                data-color="tomato">
+            <input type="button" name="btn8" value="노랑"
+                data-color="gold">
+            <input type="button" name="btn8" value="파랑"
+                data-color="cornflowerblue">
+        </div>
+
+
+
+        <div class="item">
+            <input type="button" name="btnRed9" value="빨강" 
+                data-color="tomato">
+            <input type="button" name="btnYellow9" value="노랑"
+                data-color="gold">
+            <input type="button" name="btnBlue9" value="파랑"
+                data-color="cornflowerblue">
+        </div>
+
+
     </form>
 
     <script>
@@ -223,6 +247,54 @@
         }
 
 
+
+        //RadioNodeList
+        //console.log(document.form1.btn8);
+
+        for (var i=0; i<document.form1.btn8.length; i++) {
+            document.form1.btn8[i].onclick = m12;
+        }
+
+        function m12() {
+            document.body.bgColor = event.target.dataset['color'];
+        }
+
+
+
+
+        // document.form1.btnRed9.onmouseover=m13;
+        // document.form1.btnRed9.onmouseout=m14;
+
+        // function m13() {
+        //     document.body.bgColor = event.target.dataset['color'];
+        // }
+
+        // function m14() {
+        //     document.body.bgColor = 'white';
+        // }
+
+        document.form1.btnRed9.onmouseover = m15;
+        document.form1.btnRed9.onmouseout = m15;
+        
+        document.form1.btnYellow9.onmouseover = m15;
+        document.form1.btnYellow9.onmouseout = m15;
+        
+        document.form1.btnBlue9.onmouseover = m15;
+        document.form1.btnBlue9.onmouseout = m15;
+
+        function m15() { 
+            //날 누가 불렀니
+            console.log(event.target);
+
+            //언제 부름? 이벤트 종류
+            // console.log(event.type);
+
+            if(event.type == 'mouseover'){
+                document.body.bgColor = event.target.dataset['color'];
+            }else if(event.type == 'mouseout'){
+                document.body.bgColor='white';
+            }
+        }
 
     </script>
 
