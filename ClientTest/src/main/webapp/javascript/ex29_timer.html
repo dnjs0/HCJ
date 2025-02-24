@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            border: 1px solid gray;
+            border-radius:  5px;
+            width: 200px;
+            margin-bottom: 15px;
+        }
+        fieldset input {
+            display: block;
+            margin-bottom:  10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex29_timer.html -->
+    <h1>타이머</h1>
+
+    <form name="form1">
+
+        <fieldset>
+            <legend>setTimeout</legend>
+            <input type="button" value="버튼1" name="btn1">
+            <input type="button" value="버튼2" name="btn2">
+            <input type="text" name="txt1">
+        </fieldset>
+        <fieldset>
+            <legend>setInterval</legend>
+            <input type="button" value="버튼3" name="btn3">
+            <input type="button" value="버튼4" name="btn4">
+            <input type="text" name="txt2">
+        </fieldset>
+        <fieldset>
+            <legend>타이머 통제하기</legend>
+            <input type="button" value="버튼5" name="btn5">
+            <input type="button" value="버튼6" name="btn6">
+            <input type="text" name="txt3">
+        </fieldset>
+    </form>
+
+    <script>
+
+        var txt1 = document.form.txt1;
+        var txt2 = document.form.txt2;
+        var txt3 = document.form.txt3;
+
+        var btn1 = document.form.btn1;
+        var btn2 = document.form.btn2;
+        var btn3 = document.form.btn3;
+        var btn4 = document.form.btn4;
+        var btn5 = document.form.btn5;
+        var btn6 = document.form.btn6;
+
+    </script>
+</body>
+</html>
