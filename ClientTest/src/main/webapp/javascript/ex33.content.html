@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            border: 1px solid #777;
+            width: 200px;
+        }
+        fieldset > label{
+            display: block;
+            margin-bottom: 10px;
+        }
+        #tbl1{
+            border: 1px solid gray;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        #tb1 td{
+            border: 1px solid gray;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex33.content.html -->
+    <h1>테이블 생성하기</h1>
+
+    <fieldset>
+        <legend>행x열</legend>
+        <label>행 : <select id="selRow"></select></label>
+        <label>열 : <select id="selColumn"></select></label>
+        <input type="button" value="생성하기" id="btn1">
+    </fieldset>
+
+    <table id="tbl1"></table>
+
+
+    <script>
+        var selRow = document.getElementById('selRow');
+        var selColumn = document.getElementById('selColumn');
+        var btn1 = document.getElementById('btn1');
+        var tb1 = document.getElementById('tb1');
+
+        for(var i=1; i<=10; i++){
+            selRow.options.add(new Option(i,i));
+            selColumn.options.add(new Option(i,i));
+        }
+
+
+    </script>
+</body>
+</html>
