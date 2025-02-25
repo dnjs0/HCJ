@@ -147,18 +147,31 @@
                 // <img src="images/cat01.jpg" id="cat1" width="300" alt="고양이입니다.">
                 var cat1 = document.getElementById('cat1');
                 
-                //BOM
+                //BOM > 실제 객체의 상태를 가져온다.
                 // alert(cat1.src);
                 // alert(cat1.width);
+                // alert(cat1.height);//226
                 
-                //DOM
+                //DOM > 소스상의 적혀있는 속성값을 가져온다.
                 // alert(cat1.getAttribute('src'));
-                alert(cat1.getAttribute('width'));
+                // alert(cat1.getAttribute('width'));
+                // alert(cat1.getAttribute('height'));//NULL
+
+
 
 
             });
         document.getElementById('btn5').addEventListener('click',
             function(){
+                //사진 바꾸기
+
+                //BOM
+                // cat1.src = "images/cat02.jpg";
+                // cat1.width = 500;
+
+                //DOM
+                cat1.setAttribute('src', 'images/cat03.jpg');
+                cat1.setAttribute('width', 500);
 
             });
         

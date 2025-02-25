@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        #me{
+            border: 10px solid cornflowerblue;
+        }
+        .check{
+            outline: 10px solid darkorange;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex37_axis.html -->
+    <h1>Axis</h1>
+
+    <input type="button" value="버튼1" id="btn1">
+    <hr>
+    <div>
+        할아버지
+        <div>
+            큰아버지
+            <div>사촌</div>
+        </div>
+        <div>
+            아버지
+            <div>
+                큰형
+                <div>조카</div>
+            </div>
+            <div>
+                작은형
+                <div>조카</div>
+            </div>
+            <div id="me">
+                <!-- 중심 -->
+                나
+                <div>자식</div>
+                <div>
+                    자식
+                    <div>손자</div>
+                </div>
+                <div>자식</div>
+            </div>
+            <div>동생</div>
+            <div>막내동생</div>
+        </div>
+        <div>
+            작은아버지
+            <div>사촌</div>
+        </div>
+    </div>
+
+
+    <script>
+        //나를 중심으로 부모, 자식, 형제를 탐색
+        document.getElementById('btn1').addEventListener('click',m3);
+
+        var me = document.getElementById('me');
+
+
+        //자식 찾기 방법 2가지
+        function m1() {
+            var me = document.getElementById('me');
+            
+            //<div id="me" class="check">
+            // me.title = '나';//잘됨
+            // me.class = 'check';//class는 예약어라서 class 이름 주려면 className해ㅑㅇ함
+            // me.className='check';
+
+
+            //자식 탐색
+            //- me.childNodes
+            //alert(me.childNodes.length);
+            alert(me.childNodes.length); //7, 엔터까지 자식으로 침
+
+            for(var i=0; i<me.childNodes.length; i++){
+                /*
+                    DOM 트리 구성요소(= 노드),괄호 숫자는 nodeType
+                    1. 태그(1)
+                    2. 속성(2)
+                    3. PCDATA(3)
+                    -------------
+                    4. 주석(8)
+                    5. 선언문
+                    6. 앤티티
+                    7. 등등
+
+                    DOM 노드 프로퍼티
+                    1. nodeType > 해당 노드가 어떤 타입
+                    2. nodeName > 해당 노드의 이름
+                                    - 태그(태그명-대문자)
+                                    - PCDATA(#text)
+                                    - 속성(속성명-대문자)
+                                    - 주석(#comment)
+                    3. nodeValue > 해당 노드의 값
+                                    - 태그(null)
+                                    - PCDATA(문자열)
+                                    - 속성(속성값)
+
+                */
+
+
+
+                // console.log(
+                //     me.childNodes[i].nodeType,
+                //     me.childNodes[i].nodeName,
+                //     me.childNodes[i].nodeValue
+                // );
+
+
+
+                //내 친자식을 찾는 방법 : nodeType이용하기~
+                if(me.childNodes[i].nodeType ==1){
+                    me.childNodes[i].className = 'check';
+                }
+            }
+
+
+        }
+        function m2(){
+            //자식
+            //- me.childNodes > 모든 자식 노드들
+            //- me.children > 태그 자식들
+            // alert(me.children.length);//3
+
+            // for(var i=0; i<me.children.length; i++){
+            //     me.children[i].className = 'check';
+            // }
+            
+            //- me.childNodes[0] > me.firstChild
+            //- me.childNodes[length-1] > me.lastChild
+
+            //- me.children[0] > me.firstElementChild
+            //- me.children[length-1] > me.lastElementChild
+
+            // me.firstElementChild.className = 'check'; //첫쩨
+            // me.lastElementChild.className = 'check'; //막내
+            // me.children[1].className = 'check';//둘째
+
+            me.children[1].firstElementChild.className= 'check';
+
+
+
+        }
+
+        //
+        function m3(){
+
+        }
+
+    </script>
+</body>
+</html>
