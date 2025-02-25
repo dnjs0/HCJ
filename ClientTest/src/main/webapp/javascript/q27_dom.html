@@ -5,11 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+        fieldset{
+            width: 400px;
+            margin-bottom: 20px;
+        }
+        body div{
+            margin: 5px;
+        }
+        #tbl1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 600px;
+        }
+        #tbl1 th {
+            border: 1px solid black;
+            background-color: #ddd;
+        }
+        #tbl1 td {
+            border: 1px solid black;
+            text-align:  center;
+        }
     </style>
 </head>
 <body>
     <!-- q27_dom.html -->
-    
+    <fieldset>
+        <legend >입력 항목</legend>
+        <div>이름 : <input type="text" size="20" id="txt1"></div>
+        <div>
+            나이 : 
+            <select id="sel1">
+            
+            </select>
+        </div>
+        <div>
+            성별 : 
+            <label><input type="radio" id="rb1" value="men" checked>남자</label>
+            <label><input type="radio" id="rb2" value="women">여자</label>
+        </div>
+        <div>주소: <input type="text" size="20" id="txt2"></div>
+	   
+
+       <input type="button" value="추가하기" id="btn1">
+    </fieldset>
+
+    <table id="tbl1">
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>나이</th>
+            <th>성별</th>
+            <th>주소</th>
+        </tr>
+        <tr id="tr1">
+            <td colspan="5">등록된 항목이 없습니다.</td>
+        </tr>
+        
+    </table>
+
+
+
+    <script>
+        var txt1 = document.getElementById('txt1');
+        var sel1 = document.getElementById('sel1');
+        var rb1 = document.getElementById('rb1');
+        var rb2 = document.getElementById('rb2');
+        var txt2 = document.getElementById('txt2');
+        var btn1 = document.getElementById('btn1');
+        var tbl1 = document.getElementById('tbl1');
+        var tr1 = document.getElementById('tr1');
+        
+        var num = 1;
+        
+        //select 동적으로 넣기~
+        for(var i=20; i<=60; i++)
+            sel1.innerHTML += '<option>'+i+'</option>';
+        
+        //라디오 처리하기 > 사진 넣기
+        var gender = '';
+        
+        // if(sel1.options[1].checked){
+        //     sel1.options[0].checked = false;
+        // }
+
+
+        rb1.addEventListener("click", function() {
+            if (rb1.checked) {
+                rb2.checked = false; 
+                gender = '<img src = images/man_01.png>'
+            }
+        });
+
+        rb2.addEventListener("click", function() {
+            if (rb2.checked) {
+                rb1.checked = false; 
+                gender = '<img src = images/woman_01.png>'
+            }
+        });
+
+
+
+
+
+        
+        // 클릭하면
+        btn1.onclick = function() {
+            tr1.remove();
+            console.log(sel1.options[0].selected);
+            console.log(num);
+            console.log(sel1.value);
+            console.log(rb2.value);
+            tbl1.innerHTML += '<tr><td>'+num+'</td><td>'+txt1.value+'</td><td>'+sel1.value+'</td><td>'+gender+'</td><td>'+txt2.value+'</td></tr>'
+            num += 1;
+        }
+
+
+    </script>
 </body>
 </html>

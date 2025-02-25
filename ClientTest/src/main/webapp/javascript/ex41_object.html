@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- ex41_object.html -->
+    <script>
+
+        /*
+            객체, object
+            - JavaSctipt에는 클래스가 없다. 하지만 내장 객체를 제공한다.
+
+            1. 내장 객체
+                - Date, Array, Math, Object, Number 등..
+                - 자바스크립트가 만들어서 제공하는 클래스(라고 생각해라)
+            
+            2. BOM 객체
+                - window, document, form, text, button 등
+
+            3. DOM 객체
+                - element, attribute, text, comment 등
+
+            4. 사용자 정의 객체
+                - JavaScript에는 클래스가 없다.
+                    > 원하는 형태의 객체를 생성 불가능
+                    > 가능하게 하는 기술 제공
+            
+            사용자 정의 객체
+            1. Object 내장 객체를 사용
+                - var obj = new Object();
+                - var list = new Array();
+
+            2. {}, 객체 리터럴 (많이 씀, 간편해서)
+                - var obj = {};
+                - var list = [];
+
+
+            class User{
+                public String name;
+                public int age;
+                public String address;
+            }
+
+            User hong = new User();
+
+            hong.name = "홍길동";
+            hong.age=20;
+            hong.address="서울";
+
+        
+        */
+
+        const hong = new Object();//빈 객체
+        console.log(hong);//{}
+
+        //자바 스크립트의 모든 객체는 프로퍼티를 자유롭게 추가/삭제가 가능하다.
+        hong.name = '홍길동';
+        hong.age = 20;
+        hong.address='서울시';
+        console.log(hong);
+
+        console.log(hong.name);
+        console.log(hong.age);
+        console.log(hong.address);
+
+        delete hong.address;//프로퍼티 삭제
+        console.log(hong);
+
+
+        //자바스크립트 프로터피 표기법(취향,보통1번을 씀)
+        //1. hong.tel
+        //2. hong['tel']
+
+        // hong.tel = '010-1234-5678';
+        hong['tel']= '010-1234-2222';//위와 같은 결과
+
+        // hong.primary-phone = '010'; //- 기호때문에 오류남
+        hong['primary-phone']='010-3423-1212';
+
+
+        console.log(hong);
+
+        console.clear();
+
+
+
+
+
+
+        const dog = new Object();
+
+        dog.name = '강아지';
+        dog.age = 3;
+        dog.address = '서울시';
+
+        const cat = new Object();
+
+        cat.name = '고양이';
+        cat.age =2;
+        cat.addr = '인천시';
+
+        //붕어빵 틀이 없으니까 어떤거는 address 어떤거는 addr
+        //이런 문제점을 해결하기 위해
+        //1. 생성자 함수
+        //2. class
+
+
+    </script>
+</body>
+</html>
