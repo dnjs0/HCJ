@@ -50,7 +50,9 @@
                 </div>
                 <div>자식</div>
             </div>
-            <div>동생</div>
+            <div>동생
+                <div>조카</div>
+            </div>
             <div>막내동생</div>
         </div>
         <div>
@@ -62,7 +64,7 @@
 
     <script>
         //나를 중심으로 부모, 자식, 형제를 탐색
-        document.getElementById('btn1').addEventListener('click',m3);
+        document.getElementById('btn1').addEventListener('click',m4);
 
         var me = document.getElementById('me');
 
@@ -152,10 +154,50 @@
 
         }
 
-        //
+        //부모 탐색
         function m3(){
+            //부모
+            //-me.parentNode
+            //-me.parentElement
 
+            // me.parentNode.className = 'check';
+            // me.parentElement.className = 'check';
+
+            // me.parentElement.parentElement.parentElement.className = 'check';
+            // console.log(me.parentElement.parentElement.parentElement.className);
+
+            me.parentElement.parentElement.parentElement.parentNode.className = 'check';
+            console.log(me.parentElement.parentElement.parentElement.parentElement.parentNode.className);
         }
+
+        //형제 탐색
+        function m4() {
+            //형제
+            //-me.previousSibling > 바로 위의 형제(모든 노드)
+            //-me.nextSibling > 바로 밑의 형제(모든 노드)
+            //- me.previousElementSibling > 태그
+            //- me.nextElementSibling > 태그
+
+            //부모한테 갔다가 찾기
+            // me.parentElement.children[3].className = 'check';
+
+            //이전 형제 찾기(작은형)
+            // me.previousElementSibling.className='check';
+
+            //이전이전 형 찾기(큰형)
+            // me.previousElementSibling.previousElementSibling.className='check';
+
+
+            //큰집 사촌 찾기
+            // me.parentElement.previousElementSibling.firstElementChild.className = 'check';
+
+            //동생 조카
+            me.nextElementSibling.firstElementChild.className='check';
+        }
+
+        //getXXX() > 식별자를 사용
+        //Axis > 식별자를 최소화
+
 
     </script>
 </body>
