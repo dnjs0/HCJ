@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 100px;
+            /* color: #00f7ff; */
+        }
+        #box1{border: 1px solid black; width: 200px; height: 200px;}
+
+        .one{font-size: 5rem;}
+        .two{color: orange;}
+        .three{text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <!-- ex51_css.html -->
+    <h1>CSS</h1>
+
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+    <hr>
+    <div id="box1" >상자</div>
+
+    <h1>News</h1>
+    <div class="tool">
+        <button type="button" id="btn3">➕</button>
+        <button type="button" id="btn4">➖</button>
+    </div>
+
+    <p id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, quo. Voluptatibus commodi quae consequatur? Cum earum ut ipsa vel magni dolorem corporis quod iste hic quas velit aliquid, assumenda alias consequatur perspiciatis! Alias autem explicabo illo inventore eligendi temporibus fuga! Dolore laboriosam quia minus dolorum architecto. Illo consectetur facere veniam placeat nesciunt maxime distinctio quidem voluptatibus expedita inventore sint esse accusamus, a nobis ut dolorum asperiores. In rerum distinctio porro ratione laborum minima optio odit tempora voluptates voluptate, velit libero quo? Iste aut facilis perspiciatis ducimus quisquam recusandae beatae quod, est ratione odio sit blanditiis ullam eveniet aperiam. Itaque est atque quam dicta doloremque doloribus quo quas. Dolore sint impedit obcaecati exercitationem nisi! Veniam dicta pariatur error porro earum aliquid nostrum aspernatur, iusto placeat natus accusantium, harum sequi. Est rerum voluptate, odio, non nam ipsa ex reprehenderit autem exercitationem fugiat quibusdam possimus quasi repudiandae, accusamus laborum nobis! Blanditiis beatae minus ipsum eos tempore ut corporis, facere qui ducimus, accusamus earum maiores! Nemo maiores impedit laudantium commodi rerum sunt sint in ratione sapiente nesciunt obcaecati magnam aperiam minus magni repellat nihil, debitis dicta rem praesentium soluta doloremque excepturi temporibus? Et laboriosam architecto reprehenderit ipsa voluptate voluptas fuga corrupti velit inventore dignissimos?</p>
+
+    <script>
+
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        const box1 = document.getElementById('box1');
+        
+        btn1.onclick=function(){
+            
+            /*
+                JavaScript > CSS 조작
+                1. 모든 태그 > style  속성 제공
+                    - 자바스크립트 > style 프로퍼티 제공
+                    - CSS 속성명 > 동명의 프로퍼티로 제공
+                        - 대부분 동일한 이름으로 제공
+                        - 케밥 표기법(-) > 캐멀표기법으로 변셩
+                    - CSS 속성값
+                        - 대부분 문자열로 작성
+                2. class 조작
+
+            */
+        //    box1.style='color : gray; font-size:3rem' ;
+            // box1.style.color = '#00f7ff';
+            // box1.style['font-size']='3rem';
+
+
+
+
+            // <div class= "one">
+            // box1.className = 'one two';//DOM
+            // box1.classList.add('one');
+            // box1.classList.add('two');
+           
+
+
+            //현재 상자의 너비?
+            //- 자바스크립트로 CSS를 조작 == 태그의 style 프로퍼티 조작
+            // > 인라인 스타일로 정의된 CSS 속성만 접근 가능하다.
+            // box1.style.width='400px'
+            // alert(box1.style.width);
+
+            //버튼 클릭 >  상자의 너비 + 50px
+            // box1.style.width = parseInt(box1.style.width )+ 50+'px';
+
+            const list = window.getComputedStyle(box1);
+            // console.log(list);
+            // console.log(list.width);//200px
+            // console.log(list.getPropertyValue('width'));//200px,권장
+            // console.log(window.getComputedStyle(document.body).getPropertyValue('margin'));
+
+            box1.style.width = parseInt(window.getComputedStyle(box1).getPropertyValue('width'))+50+'px';
+
+        };
+        btn2.onclick = function(){
+            // box1.style.backgroundColor='darkblue'; 
+
+
+
+            // box1.className = 'one two three';
+            // box1.className = 'one two three';
+            // box1.classList.add('three');
+            // box1.classList.remove('two');
+
+
+
+        }
+
+
+        //완전 비권장
+        // btn2.onclick=function(){
+        //     alert();
+        // };
+
+
+        const btn3 = document.getElementById('btn3');
+        const btn4 = document.getElementById('btn4');
+        let size = 16;
+
+        btn3.onclick = function () {
+            size++;
+            if(size > 30) size = 30;
+            document.getElementById('content').style.fontSize = size + 'px';
+            
+        };
+        btn4.onclick =function() {
+            size--;
+            if (size < 9) size = 9;
+            document.getElementById('content').style.fontSize = size + 'px';
+        };
+
+        
+    </script>
+</body>
+</html>
