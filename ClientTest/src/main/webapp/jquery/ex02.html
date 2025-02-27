@@ -11,7 +11,7 @@
 <body>
     <!-- ex02.html -->
     <h1>jQuery() 함수</h1>
-    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼1" id="btn1" name="btn1">
     <hr>
     <div id="box1" class="box">상자1</div>
     <div id="box2" class="box">상자2</div>
@@ -22,6 +22,13 @@
         /*
             jQuery() 함수
             1. CSS 선택자를 사용해서 태그를 검색한다.
+            2. 자바스크립트 객체를 jQuery 객체로 변환한다.
+            
+            jQuery 특징
+            1. jQuery() 검색한 모든 결과는 항상 배열(컬렉션)이다.
+            2. jQuery 객체에 어떤 업무를 적용하면(css()) 자동으로(+루프) 일괄 처리한다.
+            3. 동적으로 태그를 생성한다.
+
         */
 
         document.getElementById('btn1').addEventListener('click', () => {
@@ -55,8 +62,57 @@
 
 
             //jQuery는 모든 기능을 함수로만 제공한다.
-            //jQuery는 검색한 결과가 1개든, N개든 > 무조건 일괄 적용한다.
-            jQuery('.box').css('color','green');
+            //jQuery는 검색한 결과가 1개든, N개든 > 무조건 일괄 적용한다.(***)
+            //루프돌 필요없음(내부적으로 돈다)
+            // jQuery('.box').css('color','green');
+
+            //태그 선택자
+            // jQuery('div').css('color', 'blue');
+
+            //id선택자
+            // jQuery('#btn1').css('color', 'blue');
+
+            //class 선택지
+            // jQuery('.box').css('color', 'blue');
+
+            //기타드등
+            jQuery('h1, div:nth-child(odd)').css('color', 'blue');
+            //div:nth-child(odd)' : div중에서 첫째 둘째를 세는것이 아님! 
+            //  전체중에 : h1가 첫째, button가 둘째, hr가 셋째..
+
+
+            //****주의
+            const a  =document.all.btn1; //BOM
+            const b = document.getElementById('btn1'); //DOM
+            const c = jQuery('#btn1'); //jQuery > Wrapper Class
+            //기능을 확장하기 위해서 > jQuery 객체
+
+            console.log(a === b);//true;
+            console.log(c === a);//false
+            console.log(c === b);//false
+
+            // a.style.color = 'blue';
+            // c.style.color = 'blue'; //에러남
+
+            // c.css('color','blue');
+            // //BOM(DOM) 객체 > (형변환) > jQuery 객체
+            // jQuery(b).css('color','blue');
+            // jQuery(document.body).css('background-color', 'gold');
+
+            //jQuery 객체 > (형변환) > BOM(DOM)  객체
+            // c[0].style.color='white';
+
+
+
+
+            // jQuery('<img>') == document.createElement('img');
+            // jQuery('<img>')[0] === document.createElement('img');
+
+
+            
+
+
+
         });
     </script>
 </body>
