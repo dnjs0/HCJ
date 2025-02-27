@@ -19,3 +19,7 @@ jQuery 1,2,3은 호환성 차이
                        2)f12 > 네트워크에서 jquery가 x표시인지 확인
 
     2. CDN
+        - 다른 서버의 자원 +  참조
+            -> 서버가 죽어버리면 우리도 쓸 수없다.
+        - uncompressed 누르고 script복사
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
