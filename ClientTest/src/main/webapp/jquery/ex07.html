@@ -68,10 +68,32 @@
             //box1.innerHTML = '<img>';
             // $('#box1').html($('#box1').html() +'<img src="images/catty01.png">');
             
+            //부모태그.add(자식태그)
             //obj.appendChild()
             //obj.prependChild()와 동일
             // $('#box1').append('<img src="images/catty01.png">');//막내로 추가
-            $('#box1').prepend('<img src="images/catty01.png">');//첫째로 추가
+            // $('#box1 > img:last-child').css('border','3px solid blue');//동적으로 추가한거 조작하기
+            // $('#box1').prepend('<img src="images/catty01.png">');//첫째로 추가
+
+
+
+            //자식태그.of(부모태그), 추가되는 자식을 꾸미고 싶을때 쓰는 방법
+            // $('<img src="images/catty01.png">')
+            //                 .css('border','3px solid tomato')
+            //                 .appendTo('#box1');
+
+            
+            
+            
+            
+            //동적으로 태그를 없애기
+            //DOM
+            //-부모 태그.removeChild(자식태그)
+            
+            //jQuery
+            //- 자식태그.remove()
+            $('input').remove();
+
 
 
         });
