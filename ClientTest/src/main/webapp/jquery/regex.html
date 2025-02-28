@@ -199,10 +199,18 @@
                 2. 프로그래밍
                     - Java
                     - SQL
+                    - HTML
                     - JavaScript
 
     
     -->
+        <form action="ok.jsp">
+            이름(한글 2~4자) : <input type="text" required 
+                oninvalid="this.setCustomValidity('한글로 2-4자만 입력하세요')" 
+                pattern="[가-힣]{2,4}"> 
+            <br><br>
+            <button>전송하기</button>
+        </form>
     <script src='js/jquery-3.7.1.js'></script>
     <script>
         
