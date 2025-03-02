@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #f8f9fa;
+        }
+        .container {
+            display: flex;
+            width: 768px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 80px;
+            background: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .profile-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .sidebar nav button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .sidebar .active {
+            color: #007bff;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .icons button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .filters {
+            margin-top: 20px;
+        }
+        .buttons button {
+            border: 1px solid #ddd;
+            background: none;
+            padding: 10px;
+            border-radius: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .buttons .active {
+            background: #007bff;
+            color: white;
+        }
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .course-card {
+            background: #fff3f3;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .course-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img src="profile.jpg" alt="Profile" class="profile-img">
+            <nav>
+                <button class="active">🏠</button>
+                <button>🔖</button>
+                <button>👤</button>
+            </nav>
+        </aside>
+        
+        <main>
+            <header>
+                <h2>Hello, <strong>John Smith 👋</strong></h2>
+                <div class="icons">
+                    <button>🔍</button>
+                    <button>🔔</button>
+                </div>
+            </header>
+            
+            <section class="filters">
+                <h3>Courses 😉</h3>
+                <div class="buttons">
+                    <button class="active" onclick="filterCourses('new')">New</button>
+                    <button onclick="filterCourses('popular')">Popular</button>
+                    <button onclick="filterCourses('free')">Free</button>
+                    <button onclick="filterCourses('pro')">Pro</button>
+                </div>
+            </section>
+            
+            <section class="courses">
+                <div class="course-card new">
+                    <img src="javascript-course.jpg" alt="JavaScript">
+                    <p>- 3 h 15 min</p>
+                    <h4>JavaScript</h4>
+                    <p>Advanced web applications.</p>
+                </div>
+                <div class="course-card popular">
+                    <img src="powerpoint-course.jpg" alt="PowerPoint">
+                    <p>- 5 h 30 min</p>
+                    <h4>PowerPoint</h4>
+                    <p>Enhance your presentation skills.</p>
+                </div>
+                <div class="course-card free">
+                    <img src="datascience-course.jpg" alt="Data Science">
+                    <p>- 12 h 25 min</p>
+                    <h4>Data Science</h4>
+                    <p>Analyze the data like a pro.</p>
+                </div>
+                <div class="course-card pro">
+                    <img src="digitaldesign-course.jpg" alt="Digital Design">
+                    <p>- 2 h 45 min</p>
+                    <h4>Digital Design</h4>
+                    <p>Learn the basics of design.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        function filterCourses(category) {
+            document.querySelectorAll('.buttons button').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.querySelectorAll('.course-card').forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
