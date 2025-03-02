@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f52efe6763.js" crossorigin="anonymous"></script>
+    <style>
+        /* p > span { color: cornflowerblue;} */
+        
+        /*
+            CSS 선택자
+            1. :first-child
+                - 가상 클래스
+            2. ::before
+                - 가상 클래스 > 가상 요소
+
+            전후 선택자
+            - content 속성 사용
+            1. ::before
+            2. ::after
+
+
+        */
+        /* p > span::before{
+            content: '홍길동';
+            color: tomato;
+            font-size : 2rem;
+            text-decoration: underline;
+        }
+
+        p>span::after{
+            content: '아무개';
+            color: dodgerblue;
+        } */
+
+        p> span::before{
+            /* content: '╰(*°▽°*)╯'; */
+            font-family: FontAwesome;
+            font-weight: 400;
+            content: '\f6ed';
+            margin-right: 3px;
+        }
+
+        p> span::before{
+            /* content: '╰(*°▽°*)╯'; */
+            font-family: FontAwesome;
+            font-weight: 400;
+            content: '\f188\f6ed';
+            margin-right: 3px;
+        }
+        p:hover > span{
+            text-shadow: 0px 2px 2px #777;
+        }
+
+        #list1 a{
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+        #list1 a::before{
+            font-family: FontAwesome;
+            font-weight: 400;
+            color: #777 ;
+            content: '\f21b';
+            margin-right: 5px;
+        }
+
+        #list2 li::after{
+            font-family: FontAwesome;
+            font-weight: 400;
+            color: #444;
+            font-size: 12px;
+            content: '\f159';
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex42_selector.html -->
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam necessitatibus consectetur unde <span>sdfsdfs</span> corporis est harum <span>asldsl</span> dolore accusamus dolorem sint iusto reiciendis <span>dsdasdfsa</span>blanditiis, maxime fuga consequatur ullam omnis? Magnam!</p>
+
+    <hr>
+
+    <div id="list1">
+        <a href="#!">네이버</a>
+        <a href="#!">다음</a>
+        <a href="#!">구글</a>
+        <a href="#!">인스타</a>
+        <a href="#!">트위터</a>
+    </div>
+
+    <ul id="list2">
+        <li>2,000</li>
+        <li>3,500</li>
+        <li>4,800</li>
+    </ul>
+</body>
+</html>

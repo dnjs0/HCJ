@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 20px solid greenyellow;
+            width: 250px; height: 188px;
+            overflow: hidden;
+        }
+        #list{
+            /* outline:  5px solid blue; */
+            width: 1250px;
+            display: flex;
+            transition: all .5s;
+        }
+        /* #box:hover #list{
+            transform: translateX(-250px);
+        } */
+    </style>
+</head>
+<body>
+    <!-- ex60_css.html -->
+    <!-- transform조작 -->
+    <h1>고양이</h1>
+
+    <div id="box">
+        <div id="list">
+            <img src="images/cat01.jpg" alt="">
+            <img src="images/cat02.jpg" alt="">
+            <img src="images/cat03.jpg" alt="">
+            <img src="images/cat04.jpg" alt="">
+            <img src="images/cat05.jpg" alt="">
+        </div>
+    </div>
+
+    
+<hr>
+
+    <select name="" id="sel1">
+        <option value="0">고양이1</option>
+        <option value="1">고양이2</option>
+        <option value="2">고양이3</option>
+        <option value="3">고양이4</option>
+        <option value="4">고양이5</option>
+    </select>
+
+    <hr>
+
+    <input type="range" id="range1" min="0" max="4" style="width: 290px;" value="0">
+    <script>
+
+        const list = document.getElementById('list');
+        const sel1 = document.getElementById('sel1');
+        
+        
+        sel1.onchange = function() {
+            list.style.transform = `translateX(-${sel1.value*250}px)`;
+        };
+        window.onkeydown = function() {
+            console.log(event.keyCode);
+            if(event.keyCode >= 1 && event.keyCode <= 5){
+                list.style.transform = `translateX(-${(event.key-49)*250}px)`;
+            }
+        };
+
+        const range1 = document.getElementById('range1');
+        // range1.function (){
+        //     list.style.transform = `translateX(-${sel1.value*250}px)`
+        // };
+
+        
+
+
+
+    </script>
+</body>
+</html>

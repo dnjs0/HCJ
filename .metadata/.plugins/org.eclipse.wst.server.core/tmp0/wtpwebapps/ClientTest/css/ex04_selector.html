@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            CSS 선택자
+            1. 전체 선택자
+            2. 태그 선택자
+            3. 아이디 선택자
+            4. 클래스 선택자
+            5. 그룹 선택자
+                - 하나의 구현부 + 여러 종류희 선택자를 동시에 나열
+        */
+
+        .item { text-decoration: underline;}
+        #p1 { font-style: italic;}
+        
+        /* div , h1, b{ 
+            color : rgb(116, 116, 240); 
+        }
+         */
+
+        h1, #p3, .item{
+            color : purple;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex04_selector.html -->
+    <h1 class="item">h1 태그입니다.</h1>
+
+    <p id = "p1">p 태그 입니다.</p>
+    <p id = "p2"><b>p 태그 </b>입니다.</p>
+    <p id = "p3">p 태그 입니다.</p>
+
+    <div>div 태그 입니다.</div>
+    <div class="item"><b>div 태그</b> 입니다.</div>
+    <div class="item">div 태그 입니다.</div>
+
+    <p>p태그입니다.</p>
+    <p>p태그입니다.</p>
+
+    <hr>
+
+    <h2>찾아오는 길</h2>
+    <div>주소 : 서울시 강남구 역삼동 한독빌딩</div>
+
+    <br>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /*
+            display 속성
+            - 요소를 화면에 출력되는 방식을 조절
+            - 태그를 어떤식으로 화면에 보이게 할지?
+            1. none
+            2. inline
+            3. block
+            4. inline-block : width/height 적용 가능한 inline
+        */
+        .box{
+            border: 1px solid black;
+            display: inline;
+            width: 100px;
+            height: 100px;
+        }
+        .link{
+            border : 1px solid black;
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+
+        #menu{
+            border: 1px solid black;
+            padding: 0%;
+            list-style-type: none;
+            
+        }
+        #menu > li{
+            border: 1px solid blue;
+            display: inline-block;
+            width: 20%;
+            text-align: center;
+        }
+        #list>input{
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+    <!-- ex27_display.html -->
+    <!-- 블럭 -> 인라인 -->
+    <h1>text</h1>
+
+    <div id="list">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <ul id="menu">
+        <li>메뉴</li>
+        <li>메뉴</li>
+        <li>메뉴</li>
+        <li>메뉴</li>
+        <li>메뉴</li>
+    </ul>
+
+    <h1>블럭태그</h1>
+    <div id="box1" class="box">상자1</div>
+    <div id="box1" class="box">상자2</div>
+    <div id="box1" class="box">상자3</div>
+
+    <h1>인라인태그</h1>
+    <!-- a[herf=#]#link$.link{링크$}*3 -->
+    <a href="#" id="link1" class="link">링크1</a>
+    <a href="#" id="link2" class="link">링크2</a>
+    <a href="#" id="link3" class="link">링크3</a>
+
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae at error ut inventore sint, expedita illum! Quam in a sit corporis asperiores ipsa accusamus voluptates saepe doloremque animi. Nesciunt, quam!</p>
+    <p>Inventore repellendus repellat rerum! Molestias illo, maiores amet, eveniet voluptatem omnis, minima delectus suscipit facilis quae incidunt. Nobis labore quisquam rerum sed neque animi porro officiis dolorem, vel nostrum voluptates?</p>
+    <p>Pariatur consequuntur, nihil delectus quas perferendis numquam fugiat necessitatibus? Porro et culpa nostrum. Nam provident possimus excepturi atque perspiciatis tempore debitis ducimus. Dolores omnis non, voluptate ducimus nesciunt quae iusto.</p>
+    <p>Ex deserunt corrupti id alias sint. Voluptates labore modi quis soluta ad minima, esse repellat adipisci id dolores nihil, recusandae, rem hic fugiat sequi quaerat perferendis corrupti architecto sapiente ullam?</p>
+    <p>Molestiae maxime ipsum consectetur asperiores, fugiat rem similique fugit quidem vitae commodi accusamus? Beatae esse numquam aspernatur, vero, impedit, omnis a minima quos facilis modi asperiores quasi veniam dicta sapiente.</p>
+    <p>Sapiente incidunt rerum nam soluta ducimus aliquid, veniam minus natus sed voluptas laborum aliquam odio tempore nemo itaque omnis, quo cum. Modi nisi tempora officia cumque dolore neque, eaque ducimus?</p>
+    <p>Itaque libero, dolor veniam ipsa non nulla accusamus incidunt illum voluptatibus doloremque aut. Neque asperiores nesciunt quisquam numquam hic. Earum ullam sunt qui porro necessitatibus fugiat inventore, accusantium voluptates corrupti!</p>
+    <p>Dolor voluptatem iste neque vero odit officia culpa, delectus, quaerat blanditiis, error maxime nihil qui voluptates minima beatae reiciendis tempore at velit accusantium dignissimos? Commodi ea minus enim animi sunt.</p>
+    <p>Dicta quaerat odit quos debitis, in minus inventore expedita repellat quam, consequuntur, maiores quod fuga nisi! Impedit incidunt atque, temporibus expedita consectetur dolore distinctio nobis ut voluptatibus sed architecto inventore.</p>
+    <p>Facere omnis, expedita vel reprehenderit eos possimus. Ut esse ea dolor ullam exercitationem architecto perspiciatis eum consequuntur optio, omnis laborum molestias reprehenderit ex iste expedita facilis qui dolores vero ipsa?</p>
+    <p>Vel illum id velit animi facilis perspiciatis doloribus repellat consectetur possimus est enim tenetur hic architecto aut quod quo ipsa a sunt dolorum porro neque pariatur, in corrupti. Neque, possimus!</p>
+    <p>Vero culpa omnis aliquid vitae, repellat expedita, dolorem praesentium optio dignissimos et quia aut doloremque? Consequuntur doloremque ipsam totam excepturi quaerat illum, alias labore aliquid rem nesciunt soluta possimus minus?</p>
+    <p>Fuga debitis eum voluptatem amet tenetur in maxime laudantium consectetur deleniti reiciendis, similique, aut quis ipsam voluptatibus. Nemo quod, esse, explicabo ad adipisci ex dolore numquam quos saepe, consectetur eligendi.</p>
+    <p>Officiis aliquid et molestiae eligendi dolore quasi saepe quisquam. Dolorem mollitia quibusdam assumenda error eum pariatur impedit quos ullam doloremque dolor voluptatum tenetur, quasi eius esse, iusto quas sunt laudantium.</p>
+    <p>Eum eligendi, doloremque possimus, excepturi rerum fugit voluptatibus, animi pariatur harum a veritatis iste soluta? Atque, praesentium facere. Eaque corporis voluptate deleniti debitis corrupti quam nemo a dolores facilis magnam!</p>
+    <p>Repellendus corporis autem doloribus totam, quasi debitis nihil tenetur atque laudantium illum esse, assumenda, modi tempora architecto quae voluptatum nobis cupiditate vero reiciendis provident facilis quod! Temporibus quisquam tempora eum?</p>
+    <p>Assumenda non eius voluptate aspernatur harum explicabo accusamus a quod vitae at cumque tenetur quis unde, esse quos recusandae nobis sapiente voluptatem soluta saepe libero accusantium. Quidem iste dicta quam!</p>
+    <p>Ab natus odio qui corrupti sint dolor accusamus facere voluptas ipsa, facilis praesentium ad voluptate optio consectetur officia nostrum voluptatum perferendis quaerat quibusdam accusantium illum labore ratione? Eum, illo facilis?</p>
+    <p>Error enim placeat saepe, itaque necessitatibus quos. Est itaque aliquam culpa ducimus amet, maiores ea enim aperiam eligendi dolorum iusto dolorem ex ut sapiente esse quam perferendis cum? Earum, repudiandae?</p>
+    <p>Sapiente praesentium dolore eum velit, nulla facilis tenetur molestiae excepturi similique illo inventore. Obcaecati at accusantium, placeat, reiciendis omnis, sint exercitationem alias dolorem vitae ipsum sunt delectus tenetur magni libero?</p>
+
+    <hr>
+    <input type="text"><br>
+
+    <a href="#!">아직 URL을 결정하지 못한 링크</a>
+</body>
+</html>

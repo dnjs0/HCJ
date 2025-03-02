@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tbl1 td{
+            border: 1px solid gray;
+            width: 300px;
+            height: 700px;
+        }
+        #tbl1 td button{
+            display: block;
+            align-items: center;
+        }
+        #tbl1 div{
+            border: 1px solid gray;
+            margin-top: 0;
+        }
+        #tbl1 > select {
+            width: 100px;
+            height: 500px;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- q11_form.html -->
+    
+    <table id="tbl1">
+        <tr>
+            <td>
+                <select name="sel1" multiple size="5">
+                    <option value="f1">사과</option>
+                    <option value="f2">바나나</option>
+                    <option value="f3">귤</option>
+                    <option value="f4">파인애플</option>
+                    <option value="f5">망고</option>
+                </select>
+            </td>
+            <td>
+                <input type="button" value="Add" name="btn1">
+                <input type="button" value="Remove" name="btn2">
+                <input type="button" value="Add All" name="btn3">
+                <input type="button" value="Remove All" name="btn4">
+            </td>
+            <td>
+                <select name="sel2" multiple size="5">
+                    <option value="f1">사과</option>
+                    <option value="f2">바나나</option>
+                    <option value="f3">귤</option>
+                    <option value="f4">파인애플</option>
+                    <option value="f5">망고</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- ex42+ -->
+    <script>
+        // 자바 객테 만들기
+        //1. 빈 객체를 만든다.
+        //2.
+
+        const lee = new Object();
+
+        lee.name = '이순신';
+        lee.age = 20;
+        lee.address = '서울시 강남수';
+
+
+        const park = {};
+
+        park.name = '박문수';
+        park.age = 30;
+        park.address =  '서울시 서초구'
+
+        console.log(lee);//HTML출력
+        console.log(park);//JSON 출력
+
+        console.table(lee);
+        console.table(park);
+
+        console.clear();
+        
+        const you = { 
+            name : '유재석',
+            age : 40,
+            address : '서울시 중랑구'
+        };
+        console.table(you);
+
+
+
+        window.gender='f';
+        console.log(window.gender);
+
+        // const turtle = {
+        //     name : '거북이',
+        //     age :30,
+        //     address : '서울시 강남구 역삼동 한독 빌딩'
+        // };
+
+
+        const address = {
+            sido:'서울시',
+            gugun : '강남구',
+            dong : '역삼동',
+            bunji : '한독빌딩'
+        }
+
+        const turtle = {
+            name : '거북이',//문자열
+            age : 200,//숫자
+            address : address //객체
+        }
+
+        console.log(turtle);
+
+
+
+
+        const puppy = {
+            name : '멍멍이',
+            age : 1,
+            address:{
+                sido : '서울시',
+                gugun : '강남구',
+                dong : '역삼동'
+            },
+            nick : ['꼬물이','인절미'] //배열
+        
+        }
+
+        console.log(puppy.nick[1]);
+
+
+
+        console.clear();
+
+
+        //고양이 객체 3개 관리 > 배열
+        const catty1 = {
+            name : '냥이1',
+            age : 2
+        };
+        const catty2 = {
+            name : '냥이2',
+            age : 5
+        };
+        const catty3 = {
+            name : '냥이3',
+            age : 1
+        };
+
+        const clist1=[];
+        clist1[0] = catty1;
+        clist1[1] = catty2;
+        clist1[2] = catty3;
+
+        const clist2=[];
+        clist2.push(catty1);
+        clist2.push(catty2);
+        clist2.push(catty3);
+
+        const clist3 = [catty1, catty2, catty3];
+
+        const clist4 = [
+            {
+                name : '냥이1',
+                age : 2
+            },
+            {
+                name : '냥이2',
+                age : 5
+            },
+            {
+            name : '냥이3',
+            age : 1
+            }
+        ];
+
+        console.log(clist1);
+        console.log(clist2);
+        console.log(clist3);
+        console.clear();
+
+
+        // 객체 = 데이터 + 행동
+
+        //pig.name 프로펕티 > 문자열
+        //pig.age 프로퍼티 > 숫자
+        //pig.eat 프로퍼티 > 함수
+        const pig = {
+            name : '꿀꿀이',
+            age : 5,
+            eat : function() {
+                console.log('꿀꿀꿀' + this.name);
+            }
+        };
+
+        pig.sleep = function(){
+            console.log('꿀zzz', this.name);
+        };
+
+        function run() { 
+            console.log('대지가 달린다.'+ this.name);
+        }
+
+        pig.run =  run;
+        pig.run();
+
+        pig.eat();
+        pig.sleep();
+
+
+    </script>
+</body>
+</html>

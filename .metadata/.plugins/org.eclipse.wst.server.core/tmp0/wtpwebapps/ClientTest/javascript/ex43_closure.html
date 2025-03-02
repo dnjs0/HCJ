@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- ex43_closure.html -->
+     <!-- 클로져가 웝니까1!! 질문 -->
+    
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+
+    <script>
+        
+        //전역 함구
+        function outer() {
+
+            //지역 변수(outer)
+            let a=10;
+            console.log('a',a);
+
+            //지역 함수(outer)
+            function inner() {
+                //지역변수(inner)
+                let b = 20;
+                console.log('b',b);
+            }
+            inner();
+        }
+        outer();
+        // console.log('a',a);
+
+
+        //변수 생성
+        //let vs const
+        //-const 우선 > 변경 발생ㅇ하면 let으로 수정
+        //쓰는 이유 : 상수이므로 안정성 올라감
+        //같ㅌ은 변수에 다른 값으로 덮어쓰우기 해야하면 let
+        //  ex) m1=m2;
+
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        
+        //  전역 변수
+        let num1 = 100;
+
+        btn1.onclick = function() {
+            console.log('num1',num1);
+
+            let num2=200; //지역변수(btn1.onclick)
+            console.log('num2',num2);
+
+            btn2.onclick = function () {
+                let num3 = 300;//지역변수(btn2.onclick)
+                console.log('num3',num3);
+
+                console.log('num2',num2);//*********
+                //버튼1 을 클릭하며 ㄴnum2가 죽어야하는데 임시로 갖고있음 > closure라고 함
+            }
+        };
+
+    </script>
+
+</body>
+</html>

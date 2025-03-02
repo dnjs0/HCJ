@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bar{
+            background-color: dodgerblue;
+            width: 200px;
+            height: 10px;
+        }
+        #vbar{
+            background-color: dodgerblue;
+            width: 10px;
+            height: 100px;
+            position: absolute;
+            left: -2px;
+            top: 18px;
+        }
+        #box{
+            background-color: gold;
+            /*
+                width, height + padding, border, margin
+
+                width, height > 요소의 크기가 아니다., 콘텐츠 영역 크기(O)
+                가시적인 콘텐츠 크기 > 콘텐츠 영역 크기 + padding
+
+                실제 눈에 보이는 사각형의 너비(높이)
+                = width + padding + border
+                = height + padding + border
+
+                box-sizing 
+                - 객체 영역의 크기를 지정하는 정책
+                1. content-box(defalut)
+                    - width/height ==  content 영역의 크기
+                2. border-box
+                    - width/height == content + padding + border
+                    - 진짜로 눈에 보이는 상자의 크기가 width/height이다.
+            */
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            /* margin: 20px; */
+            border: 10px solid black;
+
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- ex38_box.html -->
+    <div id="bar"></div>
+    <div id="vbar"></div>
+
+    <div id="box">상자</div>
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        body div{
+            margin: 5px;
+        }
+        #tbl1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 300px;
+        }
+        #tbl1 td {
+            border: 1px solid black;
+            text-align:  center;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- q21_dom.html -->
+    <h1>테이블</h1>
+
+    <fieldset>
+        <legend >색상 입력</legend>
+        <div>색상 : <input type="color" id="cr1">
+        </div>
+        <div>이름 : <input type="text" size="10" id="txt1"></div>
+        
+	   
+
+       <input type="button" value="추가하기" id="btn1">
+    </fieldset>
+
+    <table id="tbl1">
+        <tr>
+            <th>색상명</th>
+            <th>미리보기</th>
+        </tr>
+        <tr>
+            <td>노랑</td>
+            <td bgcolor = "#FFFF00">#FFFF00</td>
+        </tr>
+        <tr>
+            <td>풀색</td>
+            <td bgcolor = "#ACER12">#ACER12</td>
+        </tr>
+    </table>
+    <!-- <input type="color"
+            onchange="document.getElementById('ctxt').value = this.value; document.body.bgColor = this.value;"> 
+            
+            <input type="text" id="ctxt">-->
+
+
+    <script>
+        var btn1 = document.getElementById('btn1');
+        var tbl1 = document.getElementById('tbl1');
+        var txt1 = document.getElementById('txt1');
+        var cr1 = document.getElementById('cr1');
+        
+        
+        btn1.onclick = function() {
+            console.log(txt1.value);
+            tbl1.innerHTML += '<tr><td>'+txt1.value+'</td><td bgColor='+cr1.value+'>'+cr1.value+'</td></tr>'
+            cr1.value = '000000';
+        }
+
+
+        
+    </script>
+</body>
+</html>

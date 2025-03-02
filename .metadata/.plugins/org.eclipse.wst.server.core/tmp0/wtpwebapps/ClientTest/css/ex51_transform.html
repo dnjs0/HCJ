@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            transform, animation, layout
+        */
+        body{padding: 100px;}
+        .box{
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+        }
+
+        #box1{background-color: tomato;}
+        #box2{background-color: gold;}
+        #box3{background-color: dodgerblue;}
+        
+        /*
+            변형, Transform
+            - 요소의 위치, 크기(배율), 회전, 비틀기
+            - transform : 값;
+
+            값(함수)
+            1. translate() : 위치변형
+            2. scale() : 크기(배율) 변형
+            3. rotate() : 회전 변형
+            4. skew() : 비틀기(왜곡) 변형
+            ----------------------------
+            5. matrix() : 행렬
+        */
+
+        #box2{
+            /* transform: translate(10px,10px); */
+            /* transform: scale(1,-0.3); */
+            /* transform: rotate(-45deg); */
+            /* transform: skew(0deg, 10deg);*/
+        } 
+        #cat-list img:hover img:nth-child(odd){
+            transform: translate(0px,-15px);
+        }
+
+        #cat-list img:hover{
+            transform: scale(1.25, 1.25) translate(0px,50px);
+        }
+
+        #cat-list img:hover{
+            /* transform:  rotate(-45deg); */
+            transform: skew(10deg, 0deg);
+        }
+        
+        input[type="text"]{
+            margin: 100px 0;
+            font-size: 2em;
+            padding : 10px;
+            /* transform: scale(-1, -1); */
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- ex51_transform.html -->
+    <!-- div#box$.box{상자$}*3 -->
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+<hr>
+    <input type="text">
+    <hr>
+    <h1>고양이</h1>
+    <div id="cat-list">
+        <img src="images/catty01.png" alt="">
+        <img src="images/catty02.png" alt="">
+        <img src="images/catty03.png" alt="">
+        <img src="images/catty04.png" alt="">
+        <img src="images/catty05.png" alt="">
+    </div>
+</body>
+</html>
